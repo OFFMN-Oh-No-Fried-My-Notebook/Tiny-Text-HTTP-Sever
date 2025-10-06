@@ -96,12 +96,13 @@ namespace Tiny_Text_HTTP_Sever
 
         private void Button_about_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Tiny Text HTTP Server v1.0.0\n\nDeveloped by OFFMN-Oh-No-Fried-My-Notebook.", "About Tiny Text HTTP Server", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Button_help_Click(object sender, RoutedEventArgs e)
         {
-
+            Help help = new Help();
+            help.ShowDialog();
         }
 
         private void Button_opensr_L_Click(object sender, RoutedEventArgs e)
@@ -116,7 +117,7 @@ namespace Tiny_Text_HTTP_Sever
 
         private void Button_quit_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -7,20 +7,11 @@
         mc:Ignorable="d"
         Title="ServerToolsManager" Height="175" Width="520">
     <Grid Margin="0,0,0,5">
-        <GroupBox HorizontalAlignment="Right" Height="135" Header="设置你的服务器配置" VerticalAlignment="Center" Width="500" Background="#FF7C7FF4" Margin="0,0,10,0">
-            <Button Content="启动→" HorizontalAlignment="Left" Height="50" Margin="373,0,0,0" VerticalAlignment="Top" Width="123" FontSize="24" RenderTransformOrigin="0.5,0.5">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="-11.107"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="-12.234"/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
-        </GroupBox>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="65,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="94"/>
-        <Button Content="使用此端口" HorizontalAlignment="Left" Height="20" Margin="164,35,0,0" VerticalAlignment="Top" Width="67"/>
-        <Label Content="端口：" HorizontalAlignment="Left" Height="30" Margin="20,30,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.375,0.425"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="55,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="94" x:Name="port"/>
+        <Button Content="使用此端口" HorizontalAlignment="Left" Height="20" Margin="154,15,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Content="端口：" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.375,0.425"/>
+        <Button HorizontalAlignment="Left" Height="45" Margin="440,100,0,0" VerticalAlignment="Top" Width="70" Content="启动"/>
+        <Label Content="目录:" HorizontalAlignment="Left" Height="25" Margin="10,45,0,0" VerticalAlignment="Top" Width="40"/>
+        <TextBox HorizontalAlignment="Left" Height="45" Margin="55,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" x:Name="dir" IsEnabled="False"/>
     </Grid>
 </Window>

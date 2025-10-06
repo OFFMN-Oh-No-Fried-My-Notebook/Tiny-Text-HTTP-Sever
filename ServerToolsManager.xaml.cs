@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,12 +23,16 @@ namespace Tiny_Text_HTTP_Sever
         public ServerToolsManager()
         {
             InitializeComponent();
+            port.Text = "80";
+            if(File.Exists(Directory.GetCurrentDirectory() + "\\blogs\\index.html"))
+            {
+                dir.Text = Directory.GetCurrentDirectory() + "\\blogs\\index.html";
+            }
+            else
+            {
+                dir.Text = "Default file not found, please set manually";
+            }
             
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

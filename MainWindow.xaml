@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </Button.OpacityMask>
         </Button>
-        <Button HorizontalAlignment="Left" Height="20" Margin="25,122,0,0" VerticalAlignment="Top" Width="76" Click="Button_about_Click" Background="White" BorderBrush="Black" Content="关于" MouseLeave="ALL_MousesLeave" MouseEnter="About_MouseEnter">
+        <Button HorizontalAlignment="Left" Height="20" Margin="25,122,0,0" VerticalAlignment="Top" Width="76" Click="Button_about_Click" Background="White" BorderBrush="Black" Content="关于📃" MouseLeave="ALL_MousesLeave" MouseEnter="About_MouseEnter">
             <Button.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </Button.OpacityMask>
         </Button>
-        <Button HorizontalAlignment="Left" Height="20" Margin="25,147,0,0" VerticalAlignment="Top" Width="76" Click="Button_help_Click" Background="White" BorderBrush="Black" Content="帮助" MouseLeave="ALL_MousesLeave" MouseEnter="Help_MouseEnter">
+        <Button HorizontalAlignment="Left" Height="20" Margin="25,147,0,0" VerticalAlignment="Top" Width="76" Click="Button_help_Click" Background="White" BorderBrush="Black" Content="帮助📕" MouseLeave="ALL_MousesLeave" MouseEnter="Help_MouseEnter">
             <Button.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -37,7 +37,7 @@
                 </LinearGradientBrush>
             </Button.OpacityMask>
         </Button>
-        <Button Content="开源协议" HorizontalAlignment="Left" Height="20" Margin="106,0,0,0" VerticalAlignment="Center" Width="76" Click="Button_opensr_L_Click" Background="White" BorderBrush="Black" MouseLeave="ALL_MousesLeave" MouseEnter="OpenSR_MouseEnter">
+        <Button Content="开源协议📄" HorizontalAlignment="Left" Height="20" Margin="106,0,0,0" VerticalAlignment="Center" Width="76" Click="Button_opensr_L_Click" Background="White" BorderBrush="Black" MouseLeave="ALL_MousesLeave" MouseEnter="OpenSR_MouseEnter">
             <Button.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -45,7 +45,7 @@
                 </LinearGradientBrush>
             </Button.OpacityMask>
         </Button>
-        <Button Content="环境配置" HorizontalAlignment="Left" Height="20" Margin="106,122,0,0" VerticalAlignment="Top" Width="76" Click="Button_setting_Click" Background="White" BorderBrush="Black" MouseLeave="ALL_MousesLeave" MouseEnter="Setting_MouseEnter">
+        <Button Content="环境配置🛠️" HorizontalAlignment="Left" Height="20" Margin="106,122,0,0" VerticalAlignment="Top" Width="76" Click="Button_setting_Click" Background="White" BorderBrush="Black" MouseLeave="ALL_MousesLeave" MouseEnter="Setting_MouseEnter">
             <Button.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
