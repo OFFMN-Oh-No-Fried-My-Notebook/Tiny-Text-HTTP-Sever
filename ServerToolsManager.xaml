@@ -5,13 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tiny_Text_HTTP_Sever"
         mc:Ignorable="d"
-        Title="ServerToolsManager" Height="175" Width="520">
-    <Grid Margin="0,0,0,5">
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="55,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="94" x:Name="port"/>
-        <Button Content="使用此端口" HorizontalAlignment="Left" Height="20" Margin="154,15,0,0" VerticalAlignment="Top" Width="67"/>
+        Title="ServerToolsManager" Height="195" Width="310" ResizeMode="NoResize" Icon="/Main.ico">
+    <Grid Height="175" VerticalAlignment="Top">
+        <Image HorizontalAlignment="Left" Height="149" Margin="15,10,0,0" VerticalAlignment="Top" Width="285" Source="/BG-ING-2.png"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="55,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" x:Name="port"/>
         <Label Content="端口：" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.375,0.425"/>
-        <Button HorizontalAlignment="Left" Height="45" Margin="440,100,0,0" VerticalAlignment="Top" Width="70" Content="启动"/>
+        <Button Margin="226,101,14,9" Content="启动" Click="Button_Click_3"/>
         <Label Content="目录:" HorizontalAlignment="Left" Height="25" Margin="10,45,0,0" VerticalAlignment="Top" Width="40"/>
         <TextBox HorizontalAlignment="Left" Height="45" Margin="55,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" x:Name="dir" IsEnabled="False"/>
+        <Label HorizontalAlignment="Left" Height="30" Margin="15,90,0,0" VerticalAlignment="Top" Width="40" Content="IP:"/>
+        <TextBox x:Name="ip" HorizontalAlignment="Left" Height="20" Margin="55,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="133"/>
+        <Button HorizontalAlignment="Left" Height="20" Margin="193,95,0,0" VerticalAlignment="Top" Width="28" Content="保存" Click="Button_Click_2"/>
+        <Button Margin="15,120,208,10" Content="使用默认配置" Click="Button_Click_1"/>
+        <Button Content="使用ini文件（推荐）" Margin="107,121,89,9" Click="Button_Click"/>
     </Grid>
 </Window>
