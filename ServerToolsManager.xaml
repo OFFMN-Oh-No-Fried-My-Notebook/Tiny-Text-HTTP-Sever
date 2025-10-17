@@ -5,18 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tiny_Text_HTTP_Sever"
         mc:Ignorable="d"
-        Title="ServerToolsManager" Height="195" Width="310" ResizeMode="NoResize" Icon="/Main.ico">
-    <Grid Height="175" VerticalAlignment="Top">
-        <Image HorizontalAlignment="Left" Height="149" Margin="15,10,0,0" VerticalAlignment="Top" Width="285" Source="/BG-ING-2.png"/>
-        <TextBox HorizontalAlignment="Left" Height="20" Margin="55,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" x:Name="port"/>
-        <Label Content="端口：" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.375,0.425"/>
-        <Button Margin="226,101,14,9" Content="启动" Click="Button_Click_3"/>
-        <Label Content="目录:" HorizontalAlignment="Left" Height="25" Margin="10,45,0,0" VerticalAlignment="Top" Width="40"/>
-        <TextBox HorizontalAlignment="Left" Height="45" Margin="55,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" x:Name="dir" IsEnabled="False"/>
-        <Label HorizontalAlignment="Left" Height="30" Margin="15,90,0,0" VerticalAlignment="Top" Width="40" Content="IP:"/>
-        <TextBox x:Name="ip" HorizontalAlignment="Left" Height="20" Margin="55,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="133"/>
-        <Button HorizontalAlignment="Left" Height="20" Margin="193,95,0,0" VerticalAlignment="Top" Width="28" Content="保存" Click="Button_Click_2"/>
-        <Button Margin="15,120,208,10" Content="使用默认配置" Click="Button_Click_1"/>
-        <Button Content="使用ini文件（推荐）" Margin="107,121,89,9" Click="Button_Click"/>
+        Loaded="Window_Loaded"
+        Title="ServerToolsManager" ResizeMode="NoResize" Icon="/Main.ico" d:DesignHeight="410" Width="600" Height="410" Grid.IsSharedSizeScope="True">
+    <Grid>
+        <Label x:Name="welcomeBGTEXT" HorizontalAlignment="Left" Height="100" Margin="-6,187,0,0" VerticalAlignment="Top" Width="587" Content="欢迎！" Foreground="#FFB4B4B4" FontStyle="Italic" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-4.894"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="4.28"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image Margin="327,148,10,23" Source="/BG-ING-2.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-7.085"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="12.031"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox HorizontalAlignment="Center" Height="20" Margin="0,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" x:Name="port"/>
+        <Label x:Name="l_port" Content="端口：" HorizontalAlignment="Left" Height="30" Margin="20,233,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.375,0.425"/>
+        <Button x:Name="SAVE_TRUE" Margin="509,338,31,37" Click="Button_Click_3" RenderTransformOrigin="0.556,0.738" Content="保存" Background="White" BorderBrush="Black" Foreground="Black"/>
+        <Label x:Name="l_dir" Content="目录:" HorizontalAlignment="Left" Height="26" Margin="20,231,0,0" VerticalAlignment="Top" Width="40"/>
+        <TextBox HorizontalAlignment="Center" Height="20" Margin="0,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" x:Name="dir" IsEnabled="False"/>
+        <Label x:Name="l_ip" HorizontalAlignment="Left" Height="30" Margin="20,231,0,0" VerticalAlignment="Top" Width="40" Content="IP:"/>
+        <TextBox x:Name="ip" HorizontalAlignment="Center" Height="20" Margin="0,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480"/>
+        <Button Margin="9,0,0,51" Content="使用默认配置" Click="Button_Click_1" BorderBrush="Black" Background="White" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="114"/>
+        <Button Content="使用ini文件（推荐）" Margin="9,0,0,17" Click="Button_Click" Background="White" BorderBrush="Black" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="114"/>
+        <Label x:Name="pageLable_welcome" Content="Label" HorizontalAlignment="Left" Margin="-180,331,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_dir" Content="下一步" HorizontalAlignment="Left" Height="20" Margin="509,338,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.438" BorderBrush="Black" Background="White"/>
+        <Button x:Name="button_welcome" Content="下一步" Click="button_welcome_Click" HorizontalAlignment="Left" Height="20" Margin="509,338,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.438" BorderBrush="Black" Background="White"/>
+        <Button x:Name="button_done" Content="下一步" HorizontalAlignment="Left" Height="20" Margin="509,338,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.438" BorderBrush="Black" Background="White"/>
+        <Button x:Name="button_port" Content="下一步" HorizontalAlignment="Left" Height="20" Margin="509,338,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.438" BorderBrush="Black" Background="White"/>
+        <Button x:Name="button_ip"  Content="下一步" HorizontalAlignment="Left" Height="20" Click="button_ip_Click" Margin="509,338,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.438" BorderBrush="Black" Background="White"/>
+        <Label x:Name="welcomeliabel" Content="Welcome!" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="580" FontStyle="Italic" FontWeight="Bold" FontFamily="Arial Black" FontSize="24"/>
+        <ProgressBar x:Name="All_bar" HorizontalAlignment="Left" Width="310" Margin="10,0,0,85" Height="7" VerticalAlignment="Bottom"/>
+        <Label HorizontalAlignment="Left" Margin="10,0,0,92" Width="50" Content="完成度：" Height="25" VerticalAlignment="Bottom"/>
+        <Label x:Name="main_text_label" Content="Label" HorizontalAlignment="Center" Height="176" Margin="0,50,0,0" VerticalAlignment="Top" Width="580"/>
     </Grid>
 </Window>
