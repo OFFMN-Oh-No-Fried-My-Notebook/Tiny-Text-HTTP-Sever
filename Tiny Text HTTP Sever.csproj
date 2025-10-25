@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="BG-ING-2.png" />
     <None Remove="Main.ico" />
+    <None Remove="Main_Really.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
   <ItemGroup>
     <Resource Include="BG-ING-2.png" />
     <Resource Include="Main.ico" />
+    <Resource Include="Main_Really.jpg" />
   </ItemGroup>
 
 </Project>

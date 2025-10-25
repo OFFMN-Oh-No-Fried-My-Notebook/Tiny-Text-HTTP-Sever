@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Tiny_Text_HTTP_Sever"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="Tiny Text HTTP Sever" Height="235" Width="493" ResizeMode="NoResize" Icon="/Main.ico">
+        Title="Tiny Text HTTP Sever" Height="235" Width="493" ResizeMode="NoResize" Icon="/Main_Really.jpg">
     <Grid Margin="0,10,0,0" Height="215" VerticalAlignment="Top">
         <Image HorizontalAlignment="Left" Height="214" VerticalAlignment="Center" Width="246" Source="/BG-ING-2.png" Stretch="Fill"/>
 

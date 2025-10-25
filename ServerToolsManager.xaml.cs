@@ -179,9 +179,25 @@ namespace Tiny_Text_HTTP_Sever
         {
             Server server= new Server();
             server.ShowDialog();
-        }
+        }   
 
-        private string pagegroup_HeaderText = "配置向导";
+        
+        //==========================>
+        private static bool button_welcome_bool = true;
+        private static bool button_port_bool =true;
+        private static bool button_dir_bool =true;
+        private static bool button_ip_bool=true;
+        private static bool button_done_bool=true;
+        private static bool SAVE_True_bool=true;
+        //--
+        private bool c_button_welcome_bool = true;
+        private bool c_button_port_bool = true;
+        private bool c_button_dir_bool = true;
+        private bool c_button_ip_bool = true;
+        private bool c_button_done_bool = true;
+        private bool c_SAVE_True_bool = true;
+        //==========================>
+        private  static System.Timers.Timer timer = new System.Timers.Timer(10);
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SAVE_TRUE.Visibility= Visibility.Hidden;
@@ -195,13 +211,17 @@ namespace Tiny_Text_HTTP_Sever
             ip.Visibility= Visibility.Hidden;
             l_port.Visibility= Visibility.Hidden;
             port.Visibility= Visibility.Hidden;
+          
+            timer.Elapsed += timer_tick;
+            timer.Start();
             main_text_label.Content= "欢迎使用配置向导！\n\n此向导将引导您完成服务器的基本配置。请按照以下步骤进行设置：\n\n1. 设置端口号：指定服务器监听的端口号，默认为80。\n\n2. 设置默认文件：选择服务器启动时默认打开的文件路径。\n\n3. 设置IP地址：指定服务器绑定的IP地址，默认为本机IP地址。\n\n完成以上步骤后，点击“完成”按钮保存配置并启动服务器。";
         }
         private void button_welcome_Click(object sender, RoutedEventArgs e)
         {
             welcomeliabel.Content="设置端口号以供服务器监听连接请求。";
             welcomeBGTEXT.Content= "设置端口";
-            button_welcome.Visibility= Visibility.Hidden;
+            button_welcome_bool = false;
+            
             All_bar.Value = 25;
             l_port.Visibility= Visibility.Visible;
             port.Visibility= Visibility.Visible;
@@ -211,17 +231,29 @@ namespace Tiny_Text_HTTP_Sever
         private void button_port_Click(object sender, RoutedEventArgs e)
         {
             welcomeBGTEXT.Content = "设置默认文件";
+            l_port.Visibility = Visibility.Hidden;
+            port.Visibility = Visibility.Hidden;
+            l_dir.Visibility = Visibility.Visible;
+            dir.Visibility = Visibility.Visible;
         }
 
         private void button_dir_Click(object sender, RoutedEventArgs e)
         {
             welcomeBGTEXT.Content = "设置IP地址";
+            l_dir.Visibility = Visibility.Hidden;
+            dir.Visibility = Visibility.Hidden;
+            l_ip.Visibility = Visibility.Visible;
+            ip.Visibility = Visibility.Visible;
         }
 
         private void button_ip_Click(object sender, RoutedEventArgs e)
         {
            welcomeBGTEXT.Content = "完成";
-            
+            l_ip.Visibility = Visibility.Hidden;
+            ip.Visibility = Visibility.Hidden;
+            button_done.Visibility = Visibility.Visible;
+            All_bar.Value = 100;
+
         }
         private void button_done_Click(object sender, RoutedEventArgs e)
         {
@@ -249,6 +281,44 @@ namespace Tiny_Text_HTTP_Sever
             }
             Server server = new Server();
             server.ShowDialog();
+            
         }
+        private bool timer_open = true;
+
+        private bool port_filled = false;
+
+        private void timer_tick(object? source, ElapsedEventArgs e) {
+            string? portText = null;
+            this.Dispatcher.Invoke(() => portText = port?.Text);
+            if (button_welcome_bool==false && c_button_welcome_bool==true)
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    button_welcome.Visibility = Visibility.Hidden;
+                    button_welcome.Content = "已完成";
+                });
+                c_button_welcome_bool= false;
+            }
+            if(!string.IsNullOrEmpty(portText) && button_port_bool==true &&port_filled==false)
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    button_port.Visibility = Visibility.Visible;
+                });
+                port_filled = true;
+            }
+        
+            if (timer_open==false)
+            {
+                timer?.Stop();
+                timer?.Dispose();
+                return;
+
+            }
+        }
+
+
+
+
     }
 }

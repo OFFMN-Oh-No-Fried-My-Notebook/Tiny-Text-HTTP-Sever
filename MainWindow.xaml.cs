@@ -89,9 +89,8 @@ namespace Tiny_Text_HTTP_Sever
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ServerToolsManager serverToolsWindow = new ServerToolsManager();
-
-            serverToolsWindow.ShowDialog();
+            ServerConfigEdit configEdit = new ServerConfigEdit();
+            configEdit.ShowDialog();
         }
 
         private void Button_about_Click(object sender, RoutedEventArgs e)

@@ -1,0 +1,53 @@
+﻿<Window x:Class="Tiny_Text_HTTP_Sever.ServerConfigEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tiny_Text_HTTP_Sever"
+        mc:Ignorable="d"
+        Title="ServerConfigEdit" Height="625" Width="835">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="299" Margin="527,323,0,0" VerticalAlignment="Top" Width="446" Source="/BG-ING-2.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-5.366"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="11.506"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <GroupBox HorizontalAlignment="Left" Header="配置清单" Margin="10,10,0,0" Width="150" Height="520" VerticalAlignment="Top"/>
+
+        <Button x:Name="Next" HorizontalAlignment="Right" Click="Next_Click" Height="30" Margin="0,0,40,20" VerticalAlignment="Bottom" Width="95" Content="下一步" FontSize="16" Background="White" BorderBrush="Black"/>
+        <Button HorizontalAlignment="Left" Margin="10,0,0,10" Width="150" FontSize="16" Content="使用ini文件" Height="30" VerticalAlignment="Bottom" BorderBrush="Black" Background="White"/>
+        <Button HorizontalAlignment="Left" Margin="10,0,0,45" Width="150" FontSize="16" Content="使用默认配置" Height="30" VerticalAlignment="Bottom" Background="White" BorderBrush="Black"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="10,25,0,0" VerticalAlignment="Top" Width="110" FontSize="14" Content="向导"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="10,55,0,0" VerticalAlignment="Top" Width="110" FontSize="14" Content="端口"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="10,85,0,0" VerticalAlignment="Top" Width="110" FontSize="14" Content="文件夹"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="10,115,0,0" VerticalAlignment="Top" Width="110" FontSize="14" Content="监听地址"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="10,145,0,0" VerticalAlignment="Top" Width="110" FontSize="14" Content="其它设置"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="10,175,0,0" VerticalAlignment="Top" Width="110" FontSize="14" Content="确认并保存"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="125,25,0,0" VerticalAlignment="Top" Width="25" FontSize="14" Content="……"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="125,175,0,0" VerticalAlignment="Top" Width="25" FontSize="14" Content="……"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="125,145,0,0" VerticalAlignment="Top" Width="25" FontSize="14" Content="……"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="125,91,0,0" VerticalAlignment="Top" Width="25" FontSize="14" Content="……"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="125,61,0,0" VerticalAlignment="Top" Width="25" FontSize="14" Content="……"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="125,120,0,0" VerticalAlignment="Top" Width="25" FontSize="14" Content="……"/>
+        <Label Content="欢迎！" HorizontalAlignment="Left" Height="118" Margin="-12,261,0,0" VerticalAlignment="Top" Width="850" FontSize="92" FontFamily="Arial Black" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FFD9D7D7">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-11.422"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="14.598"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label HorizontalAlignment="Left" Height="54" Margin="165,20,0,0" VerticalAlignment="Top" Width="660" FontSize="36" Content="Welcome!" FontWeight="Bold"/>
+        <TextBox x:Name="port_input" HorizontalAlignment="Left" Height="19" Margin="220,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605" Text="80"/>
+        <TextBlock x:Name="port_text" HorizontalAlignment="Left" Height="18" Margin="180,80,0,0" TextWrapping="Wrap" Text="端口：" VerticalAlignment="Top" Width="55"/>
+
+    </Grid>
+</Window>
